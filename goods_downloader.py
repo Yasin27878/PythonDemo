@@ -42,6 +42,7 @@ def get_goods_price(goods_id, worksheet):
         goods_list = goods_data['skuList']
         for goods in goods_list:
             id = str(goods['spuHsid'])
+            p_id = str(goods['productHsid'])
             name = goods['productName']
             spu = goods['spuName']
             marketPrice = str(goods['marketPrice'])
@@ -54,9 +55,10 @@ def get_goods_price(goods_id, worksheet):
             else:
                 productPic = "无"
                 # print "商品ID: " + id + ", 商品名称: " + name + ", 商品规格: " + spu + ", 商城价格: ¥" + marketPrice + ", 代理商价格: ¥" + agentPrice + ", 打折价格: ¥" + discountPrice + ", 所在城市 " + cityName + " ,产品图片 " + productPic
-            print id + ", " + name + ", " + spu + ", " + marketPrice + ", " + agentPrice + ", " + discountPrice + ", " + cityName + " , " + productPic
+            print id + ", " + p_id + "," + name + ", " + spu + ", " + marketPrice + ", " + agentPrice + ", " + discountPrice + ", " + cityName + " , " + productPic
             item = []
             item.append(id)
+            item.append(p_id)
             item.append(name)
             item.append(spu)
             item.append(marketPrice)
