@@ -58,7 +58,7 @@ worksheet = workbook.add_worksheet("Sheet1")
 # Start from the first cell. Rows and columns are zero indexed. 按标号写入是从0开始的，按绝对位置'A1'写入是从1开始的
 row = 0
 col = 0
-item_type = ["商品ID","属性ID" "商品名称 ", "商品规格 ", "商城价格 ", "代理商价格", " 打折价格", " 所在城市", " 产品图片"]
+item_type = ["商品ID","属性ID" ,"商品名称 ", "商品规格 ", "商城价格 ", "代理商价格", " 打折价格", " 所在城市", " 产品图片"]
 for i in item_type:
     worksheet.write(row, col, i)
     col += 1
